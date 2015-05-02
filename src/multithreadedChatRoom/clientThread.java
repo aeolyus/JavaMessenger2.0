@@ -67,7 +67,7 @@ public void run() {
         for (int i = 0; i < maxClientsCount; i++) {
           if (threads[i] != null && threads[i] != this) {
             threads[i].os.println("*** A new user " + name
-                + " entered the chat room !!! ***");
+                + " entered the chat room ***");
           }
         }
       }
@@ -116,7 +116,7 @@ public void run() {
           if (threads[i] != null && threads[i] != this
               && threads[i].clientName != null) {
             threads[i].os.println("*** The user " + name
-                + " is leaving the chat room !!! ***");
+                + " has left the chat room ***");
           }
         }
       }
