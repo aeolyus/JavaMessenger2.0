@@ -14,11 +14,13 @@ public class ClientServer {
 		Object selection = JOptionPane.showInputDialog(null, "Login as : ", "Chat Room", JOptionPane.QUESTION_MESSAGE, null, selectioValues, initialSection);
 		if(selection.equals("Server")){
                    String[] arguments = new String[] {};
-			new MultiThreadChatServerSync().main(arguments);
+			new MultiThreadChatServerSync();
+			MultiThreadChatServerSync.main(arguments);
 		}else if(selection.equals("Client")){
 			String IPServer = JOptionPane.showInputDialog("Enter the Server ip adress");
                         String[] arguments = new String[] {IPServer};
-			new ChatClient().main(arguments);
+			new ChatClient();
+			ChatClient.main(arguments);
 		}
 		
 	}

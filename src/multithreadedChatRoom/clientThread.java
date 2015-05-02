@@ -32,7 +32,8 @@ public class clientThread extends Thread{
     maxClientsCount = threads.length;
   }
 
-  public void run() {
+  @SuppressWarnings("deprecation")
+public void run() {
     int maxClientsCount = this.maxClientsCount;
     clientThread[] threads = this.threads;
 

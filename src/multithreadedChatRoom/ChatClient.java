@@ -82,7 +82,11 @@ public class ChatClient {
     /** Chat client UI */
     static class ChatFrame extends JFrame implements Observer {
 
-        private JTextArea textArea;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 7167816054448490535L;
+		private JTextArea textArea;
         private JTextField inputTextField;
         private JButton sendButton;
         private ChatAccess chatAccess;
