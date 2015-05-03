@@ -94,6 +94,7 @@ public void run() {
                      * message was sent.
                      */
                     this.os.println(">" + name + "> " + words[1]);
+                    System.out.println(">" + name + "> " + words[1]);
                     break;
                   }
                 }
@@ -106,6 +107,7 @@ public void run() {
             for (int i = 0; i < maxClientsCount; i++) {
               if (threads[i] != null && threads[i].clientName != null) {
                 threads[i].os.println("<" + name + "> " + line);
+                System.out.println("<" + name + "> " + line);
               }
             }
           }

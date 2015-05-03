@@ -99,7 +99,7 @@ public class ChatClient {
 
         /** Builds the user interface */
         private void buildGUI() {
-            textArea = new JTextArea(20, 50);
+            textArea = new JTextArea(15, 40);
             textArea.setEditable(false);
             textArea.setLineWrap(true);
             add(new JScrollPane(textArea), BorderLayout.CENTER);
