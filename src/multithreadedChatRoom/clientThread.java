@@ -57,6 +57,7 @@ public void run() {
       /* Welcome the new the client. */
       os.println("Welcome " + name
           + " to our chat room.\nTo leave enter /quit in a new line.");
+      System.out.println("Welcome " + name + " to our chat room.");
       synchronized (this) {
         for (int i = 0; i < maxClientsCount; i++) {
           if (threads[i] != null && threads[i] == this) {
