@@ -57,7 +57,8 @@ public void run() {
       /* Welcome the new the client. */
       os.println("Welcome " + name
           + " to our chat room.\nTo leave enter /quit in a new line.");
-      System.out.println("Welcome " + name + " to our chat room.");
+      System.out.println("*** The user " + name
+              + " has joined the chat room ***");
       synchronized (this) {
         for (int i = 0; i < maxClientsCount; i++) {
           if (threads[i] != null && threads[i] == this) {
@@ -69,8 +70,6 @@ public void run() {
           if (threads[i] != null && threads[i] != this) {
             threads[i].os.println("*** A new user " + name
                 + " entered the chat room ***");
-            System.out.println("*** A new user " + name
-                    + " entered the chat room ***");
           }
         }
       }
@@ -122,11 +121,12 @@ public void run() {
               && threads[i].clientName != null) {
             threads[i].os.println("*** The user " + name
                 + " has left the chat room ***");
-            System.out.println("*** The user " + name
-                    + " has left the chat room ***");
+           
           }
         }
       }
+      System.out.println("*** The user " + name
+              + " has left the chat room ***");
       os.println("*** Bye " + name + " ***");
 
       /*
